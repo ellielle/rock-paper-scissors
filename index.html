@@ -41,7 +41,7 @@
         }
       }
       function playRound() {
-        player = playerSelection(prompt("Enter move:"));
+        player = playerSelection(prompt("Enter move (rock, paper, or scissors):"));
         computer = computerPlay();
         if ((player > computer) || ((player == 1) && (computer == 3))) {
           console.log(`You win, ${returnText(player)} beats ${returnText(computer)}!`);
