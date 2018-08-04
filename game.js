@@ -100,14 +100,14 @@ function playRound(e) {
 }
 
 function updateScore(player, computer) {
-  score.textContent = "Player: " + player + "\tComputer: " + computer;
+  score.textContent = "Player: " + player + " Computer: " + computer;
   scoreContainer.appendChild(score);
   scoreCount.appendChild(scoreContainer);
   scoreCount.classList.remove("hide");
 }
 
 function resetGame(result) {
-  statusMessage.textContent = (result) ? "You win! Click reset to start the game over" : "You lose! Click reset to start the game over";
+  statusMessage.textContent = (result) ? "You win! Click reset to start another game" : "You lose! Click reset to start another game";
   gameButtons.forEach(btn => btn.classList.add("hide"));
   resetButton.classList.remove("hide");
 }
