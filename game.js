@@ -71,6 +71,7 @@ function playRound(e) {
       status.appendChild(statusMessage);
       if(status.classList.contains("hide")) status.classList.remove("hide");
       playerScore++;
+      if (playerScore == 5) resetGame(1);
       updateScore(playerScore, computerScore);
     }
     else if ((player < computer) || ((player ==3) && (computer == 1))) {
@@ -78,6 +79,7 @@ function playRound(e) {
       status.appendChild(statusMessage);
       if(status.classList.contains("hide")) status.classList.remove("hide");
       computerScore++;
+      if(computerScore == 5) resetGame(0);
       updateScore(playerScore, computerScore);
     }
     else if (player == computer) {
