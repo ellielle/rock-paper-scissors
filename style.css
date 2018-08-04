@@ -1,0 +1,70 @@
+html {
+    background-color: black;
+    font-size: 15px;
+}
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+p {
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+.startButton, .moves, .score, .reset {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.btn {
+    margin: 1rem;
+}
+.resetbtn {
+    width: 10rem;
+    height: 2rem;
+    background-color: red;
+    border: none;
+    font-size: 1.5rem;
+}
+.reset {
+    align-content: center;
+    justify-content: center;
+}
+.status {
+    min-height: 16vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.score {
+    min-height: 30vh;
+    align-items: center;
+}
+.startButton {
+    min-height: 16vh;
+}
+.moves{
+    min-height: 10vh;
+    align-items: flex-start;
+}
+#start, #rock, #paper, #scissors {
+    text-align: center;
+    border: none;
+    width: 10rem;
+    height: 4rem;
+}
+#start {
+    background-color: green;
+    font-size: 1.5rem;
+    color: white;
+    align-self: flex-end;
+    justify-content: center;
+}
+#rock, #paper, #scissors {
+    background-color: purple;
+    font-size: 2rem;
+}
+.hide {
+    visibility: hidden;
+}

@@ -1,71 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <script>
-      function computerPlay() {
-        return Math.floor((Math.random() * 3) + 1);  //1 is rock, 2 is paper, 3 is scissors
-      }
-      function playerSelection(str) {
-        input = str.toLowerCase();
-
-        switch(input) {
-          case "rock":
-            return 1;
-            break;
-          case "paper":
-            return 2;
-            break;
-          case "scissors":
-            return 3;
-            break;
-          default:
-            return 0;
-            break;
-        }
-      }
-      function returnText(num) {
-        switch (num){
-          case 1:
-            return "rock";
-            break;
-          case 2:
-            return "paper";
-            break;
-          case 3:
-            return "scissors";
-            break;
-        }
-      }
-      function playRound() {
-        player = playerSelection(prompt("Enter move (rock, paper, or scissors):"));
-        computer = computerPlay();
-        if ((player > computer) || ((player == 1) && (computer == 3))) {
-          console.log(`You win, ${returnText(player)} beats ${returnText(computer)}!`);
-        }
-        else if ((player < computer) || ((player ==3) && (computer == 1))) {
-          console.log(`You lose, ${returnText(computer)} beats ${returnText(player)}!`);
-        }
-        else if (player == computer) {
-          console.log("It's a tie!");
-        }
-        else {
-          console.log("Please enter a valid move: Rock, Paper, or Scissors");
-        }
-      }
-
-
-      function game() {
-        for (let x = 0; x < 5; x++) {
-          playRound();
-        }
-      }
-
-      game();
-
-    </script>
+    <div class="status hide"></div>
+    <div class="startButton">
+        <button id="start">Start Game</button>
+    </div>
+    <div class="moves">
+        <button class="btn hide" id="rock">Rock</button>
+        <button class="btn hide" id="paper">Paper</button>
+        <button class="btn hide" id="scissors">Scissors</button>
+    </div>
+    <div class="score hide"></div>
+    <div class="reset">
+      <button class="resetbtn hide">Reset</button>
+    </div>
+  <script src="game.js"></script>
   </body>
 </html>
